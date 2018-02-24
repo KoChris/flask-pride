@@ -1,0 +1,5 @@
+applications:
+- name: pride-flask
+  memory: 512M
+  command: python pride.py
+  buildpack: python_buildpack
