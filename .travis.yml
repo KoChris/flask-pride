@@ -1,1 +1,16 @@
 language: python
+
+install:
+  - pip install -r requirements.txt
+
+script:
+  - pytest
+
+deploy:
+  provider: cloudfoundry
+  username: chris.ko791@gmail.com
+  password: 
+    secure: LXZSIomyRAHTkdvXh9PN5vg7Yw+1TbmK3CstDMRjDQZHsVlQYSrnnUiHyt0TQ0GySkRBtCMt/HzAbkSL/T06ZHsinxEpjnTNr94Jljf/KLeGyXkfL5QyNg5tyYzZnEO4XDKJ4Xyrdt+x2+GknEbbBf9mSuJVWDEB3kn2zv3tXAPxsztWTXaiWjuJIj2MMAgwZjQpandFfO+i/W3XRFvPSupJt7Dw5/QRZ2wQUxWlztD2BhmAk4iNGuY9GKI7U6ArT+U0+TGrOLU6c7RZe5Cf87vP8xHICyvJSQW3q5t+9KQHHzPZJxcrW6rfb3zBQTkdGeOaxEJI9ied1jGqemzZIcPgXXBTZP9fXZ6s9O1JPbvCm+ZOLhZNWMObIZVF3FRMJ3V1bni8+lEOh+g3ylDEKept9UWYCv6QbAVQREtPmJI32RQFiQqVtWL902i7e7lER6YzEsGlWg070mo/0rGkoG+XN5y1HHGXM6/ien2jRzmo/hDyuqEveORS+gGkJYCKIcxSf41yPto7NvoARLox/BjXNmlLaBw56pp7dfZhUYc8C6iKQOAi3KjI8Um1/vJ7fPCDSeEsrKtYe3xEe4GSrWQ6Ls+uSxYuh2+maualpqOAo5Z2KV3rUiHyGXvsJJup2GDU8VLrx/Lx9bQQj4EhoZ9UxsC7I4Q9nk2UjGnaQNY=
+  api: https://api.run.pivotal.io
+  organization: pride
+  space: development
